@@ -1,6 +1,7 @@
 """Imports"""
 from flask import Flask
 
+
 def test_base_route():
     """Comments"""
     app = Flask(__name__)
