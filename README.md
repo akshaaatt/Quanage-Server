@@ -1,2 +1,2 @@
 # quanage-server
-Flask Server of QUanage
+Flask Server of Quanage
