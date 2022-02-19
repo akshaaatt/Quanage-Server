@@ -9,5 +9,5 @@ def test_base_route():
     url = '/'
 
     response = client.get(url)
-    assert response.get_data() == 'Hi Qiskitter!'
+    assert response.get_data() == b'Hi Qiskitter!'
     assert response.status_code == 200
