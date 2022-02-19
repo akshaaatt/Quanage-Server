@@ -1,17 +1,20 @@
+"""Imports"""
 from flask import Flask, jsonify, request
-from api import run_qasm, get_statevector, get_unitary
 import json_tricks
+from api import run_qasm, get_statevector, get_unitary
 
 app = Flask(__name__)
 
 
 @app.route('/')
 def welcome():
+    """Comments"""
     return "Hi Qiskitter!"
 
 
 @app.route('/api/run/qasm', methods=['GET'])
-def qasm():
+def qasm_():
+    """Comments"""
     qasm = request.args['qasm']
     backend = request.args['backend']
     num_shots = request.args['num_shots']
@@ -27,6 +30,7 @@ def qasm():
 
 @app.route('/api/run/statevector', methods=['GET'])
 def statevector():
+    """Comments"""
     qasm = request.args['qasm']
     backend = request.args['backend']
     print("--------------")
@@ -40,6 +44,7 @@ def statevector():
 
 @app.route('/api/run/unitary', methods=['GET'])
 def unitary():
+    """Comments"""
     qasm = request.args['qasm']
     backend = request.args['backend']
     print("--------------")
